@@ -24,13 +24,31 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "favicon.ico",
+                "input": "src/",
+                "output": "/"
+              },
+              {
+                "glob": "perspective.wasm.worker.js",
+                "input": "node_modules/@finos/perspective/dist/umd/",
+                "output": "/"
+              },
+              {
+                "glob": "psp.async.wasm",
+                "input": "node_modules/@finos/perspective/dist/umd/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@finos/perspective/dist/umd/perspective.js",
+              "node_modules/@finos/perspective-viewer/dist/umd/perspective-viewer.js",
+              "node_modules/@finos/perspective-viewer-hypergrid/dist/umd/perspective-viewer-hypergrid.js",
+              "node_modules/@finos/perspective-viewer-d3fc/dist/umd/perspective-viewer-d3fc.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -124,6 +142,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "AngularPerspective"
 }
