@@ -1,1 +1,16 @@
-<app-perspective></app-perspective>
+<div (window:resize)="onResize($event)" style="padding: 5px;">
+    <form class="example-form">
+        <mat-form-field class="example-full-width" style="padding: 5px;">
+          <input matInput placeholder="Source table" [(ngModel)]="sourceName" required name="source">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" style="padding: 5px;">
+           <input matInput placeholder="Url"  [(ngModel)]="sourceUrl" required name="url">
+        </mat-form-field>
+    </form>
+    <perspective-remote 
+        [height]="height"
+        [width]="width - 40" 
+        [sourceTable]="sourceName"
+        [sourceUrl]="sourceUrl">
+    </perspective-remote>
+</div>

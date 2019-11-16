@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@finos/perspective-viewer/dist/umd/material.dark";
+
+perspective-viewer {
+  background-color: #252627;
+  color: #D2D2D2;
+  font-family: 'Roboto', 'Helvetica Neue', 'sans-serif';
+
+  --plugin--background: #252627;
+  
+  --inactive--color: #666768;
+  --active--background: #464747;
+  --active--color: #57e65e;
+  --float--column-type--color:  #0ADDAF;
+  --string--column-type--color: #F8A342;
+  --datetime--column-type--color: #95BCFF;
+  --boolean--column-type--color: #6D27FF;
+  
+  --hypergrid--color: #D2D2D2;
+  --hypergrid-tree-header--background: #252627;
+  --hypergrid--background: #252627;
+  --hypergrid-tree-header--color: #D2D2D2;
+  --hypergrid-header--background: #252627;
+  --hypergrid-separator--color: #D2D2D2;
+  --hypergrid-header--color: #D2D2D2;
+  --hypergrid--font-family: 'Roboto', 'Helvetica Neue', 'sans-serif';
+  --hypergrid-header--font-family: 'Roboto', 'Helvetica Neue', 'sans-serif';
+
+  --hypergrid-positive--color: #89ee8e;
+  --hypergrid-negative--color: #ff8080;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
